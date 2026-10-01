@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Home | AutoElite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-car-front-fill"></i> AutoElite</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="cars.html">Cars</a></li>
+                    <li class="nav-item"><a class="nav-link " href="brands.html">Brands</a></li>
+                    <li class="nav-item"><a class="nav-link " href="offers.html">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link " href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link " href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-danger ms-lg-2 px-3" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <span class="badge bg-danger px-3 py-2 mb-3">PREMIUM CAR SHOWROOM</span>
+                    <h1>Drive Your<br><span class="text-danger">Dream Car.</span></h1>
+                    <p>Discover a curated collection of premium cars, attractive offers and reliable showroom services —
+                        all in one place.</p>
+                    <div class="d-flex gap-3 flex-wrap"><a href="cars.html" class="btn btn-danger btn-lg px-4">Explore
+                            Cars</a><a href="contact.html" class="btn btn-outline-light btn-lg px-4">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Cars</h2>
+                <p>Choose from our popular vehicles</p>
+            </div>
+            <div class="row" id="featuredCars"></div>
+        </div>
+    </section>
+    <section class="section bg-white">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose AutoElite?</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature"><i class="bi bi-patch-check"></i>
+                        <h5 class="fw-bold mt-3">Verified Vehicles</h5>
+                        <p class="text-muted">Quality-checked cars with transparent information.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature"><i class="bi bi-currency-rupee"></i>
+                        <h5 class="fw-bold mt-3">Best Offers</h5>
+                        <p class="text-muted">Attractive deals and flexible finance options.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature"><i class="bi bi-headset"></i>
+                        <h5 class="fw-bold mt-3">Expert Support</h5>
+                        <p class="text-muted">Professional support before and after purchase.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>document.addEventListener("DOMContentLoaded", home)</script>
+    <div id="toastBox" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+    <footer class="py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h4 class="fw-bold text-white"><i class="bi bi-car-front-fill text-danger"></i> AutoElite</h4>
+                    <p>Premium cars, trusted service and a smooth showroom experience.</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-white">Quick Links</h6><a class="d-block mb-2" href="cars.html">Cars</a><a
+                        class="d-block mb-2" href="offers.html">Offers</a><a class="d-block"
+                        href="contact.html">Contact</a>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-white">Contact</h6>
+                    <p class="mb-1"><i class="bi bi-telephone"></i> +91 98765 43210</p>
+                    <p><i class="bi bi-envelope"></i> info@autoelite.com</p>
+                </div>
+            </div>
+            <hr>
+            <p class="mb-0 text-center">© 2026 AutoElite Car Showroom. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

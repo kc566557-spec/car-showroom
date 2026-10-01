@@ -1,0 +1,52 @@
+window.__BD_NONCE="1790848006.4a7ac3d1568bdd0b86d2cd449972449a";(function(){
+  var s={};
+  s.wd=navigator.webdriver||false;
+  try{var c=document.createElement('canvas');var g=c.getContext('webgl');
+  if(g){var d=g.getExtension('WEBGL_debug_renderer_info');
+  if(d){s.wr=g.getParameter(d.UNMASKED_RENDERER_WEBGL);}
+  else{s.wr='noext';}}else{s.wr='err';}
+  }catch(e){s.wr='err';}
+  s.sw=screen.width;s.sh=screen.height;
+  s.ow=window.outerWidth;s.oh=window.outerHeight;
+  s.dpr=window.devicePixelRatio||0;
+  s.plg=navigator.plugins.length;
+  s.cr=!!(window.chrome&&window.chrome.runtime);
+  s.hc=navigator.hardwareConcurrency||0;
+  s.mtp=navigator.maxTouchPoints||0;
+  try{var cv=document.createElement('canvas');cv.width=200;cv.height=50;
+  var cx=cv.getContext('2d');cx.textBaseline='top';cx.font='14px Arial';
+  cx.fillStyle='#f60';cx.fillRect(125,1,62,20);cx.fillStyle='#069';
+  cx.fillText('bot detect 2026',2,15);
+  var h=0,dt=cv.toDataURL();
+  for(var i=0;i<dt.length;i++){h=((h<<5)-h)+dt.charCodeAt(i);h|=0;}
+  s.cvh=h;
+  }catch(e){s.cvh=0;}
+  navigator.permissions.query({name:'notifications'}).then(function(p){
+  s.np=p.state;}).catch(function(){});
+  var achDone=false,rafDone=false;
+  try{var ac=new OfflineAudioContext(1,4410,44100);
+  var osc=ac.createOscillator();
+  var comp=ac.createDynamicsCompressor();
+  comp.threshold.value=-50;comp.knee.value=40;
+  comp.ratio.value=12;comp.attack.value=0;comp.release.value=0.25;
+  osc.type='triangle';osc.frequency.value=10000;
+  osc.connect(comp);comp.connect(ac.destination);
+  osc.start(0);
+  ac.startRendering().then(function(buf){
+  var d=buf.getChannelData(0);var ah=0;
+  for(var i=4400;i<4410;i++){ah=((ah<<5)-ah)+(d[i]*1000|0);ah|=0;}
+  s.ach=ah;achDone=true;if(rafDone)send();
+  }).catch(function(){s.ach=0;achDone=true;if(rafDone)send();});
+  }catch(e){s.ach=0;achDone=true;}
+  var rt=[],rc=0;
+  function mraf(t){if(rc++<10){rt.push(t);requestAnimationFrame(mraf);}
+  else{var df=[];for(var i=1;i<rt.length;i++)df.push(rt[i]-rt[i-1]);
+  var m=df.reduce(function(a,b){return a+b;},0)/df.length;
+  var v=df.reduce(function(a,b){return a+Math.pow(b-m,2);},0)/df.length;
+  s.raf=Math.sqrt(v);rafDone=true;if(achDone)send();}}
+  requestAnimationFrame(mraf);
+  function send(){try{
+  fetch('/beacon/t.gif',{method:'POST',headers:{'X-BD':btoa(JSON.stringify(s)),'X-BD-Nonce':window.__BD_NONCE||''},
+  keepalive:true,body:''});
+  }catch(e){}}
+  })();
